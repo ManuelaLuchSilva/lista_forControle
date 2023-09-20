@@ -9,15 +9,16 @@
     //ENTRADA
     const quantNotas = Number(prompt("Quantas notas o aluno tem?"))
     let nota = 0
-    let soma
+    let soma = 0
 
     //PROCESSAMENTO
     for (let contador = 1; contador <= quantNotas; contador++) {
         nota = Number(prompt(`Qual a nota ${contador} do aluno?`));
         soma = soma + nota
     }
+    let media = Math.round((soma/quantNotas).toFixed(1))
 
     //SAÍDA
-    alert(soma)
+    document.write(media)
 
 </script>
