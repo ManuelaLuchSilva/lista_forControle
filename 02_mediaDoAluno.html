@@ -7,11 +7,17 @@
     */
 
     //ENTRADA
-    
+    const quantNotas = Number(prompt("Quantas notas o aluno tem?"))
+    let nota = 0
+    let soma
 
     //PROCESSAMENTO
-    
+    for (let contador = 1; contador <= quantNotas; contador++) {
+        nota = Number(prompt(`Qual a nota ${contador} do aluno?`));
+        soma = soma + nota
+    }
 
     //SAÍDA
+    alert(soma)
 
 </script>
