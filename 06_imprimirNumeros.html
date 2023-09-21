@@ -6,11 +6,28 @@
     */
 
     //ENTRADA
+    const num1 = Number(prompt("Informe um número"));
+    const num2 = Number(prompt("Informe outro número"));
+    let numImpar = []
 
-    
     //PROCESSAMENTO
+    if (num1 < num2) {
+        for (let contador = num1; contador <= num2; contador++) {
+            if(contador%2!=0){
+                numImpar.push(contador);
+            }
+        }
+        document.write(`Os números impares são: <br> ${numImpar.join(",<br>")}.`)
+    }
+    else if (num2 <= num1){
+        document.write("ERROR. O num1 tem que ser menor que num2")
+    }
+    else{
+        document.write("Apenas letras")
+    }
 
-    
+
+
     //SAÍDA
 
 </script>

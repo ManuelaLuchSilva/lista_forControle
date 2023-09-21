@@ -7,11 +7,16 @@
     */
 
     //ENTRADA
-
+    let array = []
+    for (let contador = 0; contador <=5; contador++){
+        let num = prompt(`Informe um número:`);
+        array.push(num);
+    }
     
     //PROCESSAMENTO
 
     
     //SAÍDA
+    alert(`O maior número informado é ${array.sort((a, b) => b-a)[0]}`)
 
 </script>
