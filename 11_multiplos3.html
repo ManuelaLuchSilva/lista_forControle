@@ -5,11 +5,19 @@
     */
 
     //ENTRADA
-
+    let multi3 = 0
+    let array = []
 
     //PROCESSAMENTO
-
+    for(let contador = 1; contador <= 100; contador++){
+        if(contador%3==0){
+            multi3=multi3+contador
+            array.push(contador)
+        }
+    }
+    let media = multi3/array.length
 
     //SAÍDA
+    document.write(`Múltiplos de 3 entre 1 e 100: <br>${array.join(", ")}. <br>Sua soma é ${multi3}.<br>Sua média é ${media}`)
 
 </script>

@@ -4,15 +4,33 @@
     PROBLEMA
     Peça para o programa perguntar ao professor regente o nome dos três candidatos a representante da sala.
     Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
-    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo e também a porcentagem de cada candidato a representante de sala.
     */
 
     //ENTRADA
-
-
+    let quantAlunos = Number(prompt("Quantos alunos tem na sala: "));
+    let cand1 = prompt("Qual o nome do primeiro candidato");
+    let cand2 = prompt("Qual o nome do segundo candidato");
+    let cand3 = prompt("Qual o nome do terceiro candidato");
+    let votos1 = 0;
+    let votos2 = 0;
+    let votos3 = 0;
     //PROCESSAMENTO
-
-
+    for(contador = 1; contador <= quantAlunos; contador++){
+        let voto = Number(prompt(`candidatos: \n(${cand1}=1 \n${cand2}=2 \n${cand3}=3)`))
+        if(voto === 1){
+            votos1++
+        }
+        else if (voto === 2){
+            votos2++
+        }
+        else if (voto === 3){
+            votos3++
+        }
+    }
+    let porc1 = (votos1 / quantAlunos) * 100
+    let porc2 = (votos2 / quantAlunos) * 100
+    let porc3 = (votos3 / quantAlunos) * 100
     //SAÍDA
-
+    document.write(`Candidato: ${cand1}<br>Votos:<br>Quantidade: ${votos1}<br>Porcentagem: ${porc1.toFixed(2)}% <br><br>Candidato:${cand2} <br>Votos:<br>Quantidade: ${votos2}<br>Porcentagem: ${porc2.toFixed(2)}%<br><br>Candidato: ${cand3}<br>Votos:<br>Quantidade: ${votos3}<br>Porcentagem: ${porc3.toFixed(2)}%`)
 </script>
